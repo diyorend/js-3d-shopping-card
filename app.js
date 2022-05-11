@@ -20,18 +20,19 @@ container.addEventListener("mouseleave", (e) => {
   img.style.transform = "rotateZ(0deg)";
 });
 
-function event3D(e) {
+container.addEventListener("touchstart", (e) => {
+  card.style.transition = "none";
+  img.style.transform = "rotateZ(-30deg)";
+  img.style.transition = "all 0.8s ease";
+});
+container.addEventListener("touchend", (e) => {
+  card.style.transition = "all 0.8s ease";
+  card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+  img.style.transform = "rotateZ(0deg)";
+});
+
+container.addEventListener("touchmove", (e) => {
   let x = (window.innerWidth / 2 - e.touches[0].pageX) / 30;
   let y = (window.innerHeight / 2 - e.touches[0].pageY) / 30;
   card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
-
-  img.style.transform = "rotateZ(-30deg)";
-  img.style.transition = "all 1s ease";
-
-  card.style.transition = "all 1s ease";
-  container.style.transition = "all 1s ease";
-  container.addEventListener("transitionend", () => {
-    img.style.transform = "rotateZ(0deg)";
-    card.style.transform = `rotateY(0deg) rotateX(0deg)`;
-  });
-}
+});
