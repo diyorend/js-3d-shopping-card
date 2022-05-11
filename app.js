@@ -8,6 +8,12 @@ container.addEventListener("touchmove", (e) => {
   let x = (window.innerWidth / 2 - e.pageX) / 20;
   let y = (window.innerHeight / 2 - e.pageY) / 20;
   card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+  container.addEventListener("transitionend", () => {
+    img.style.transform = "rotateZ(0deg)";
+    img.style.transition = "all 0.8s ease";
+    card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+    card.style.transition = "all 0.8s ease";
+  });
 });
 container.addEventListener("mousemove", (e) => {
   let x = (window.innerWidth / 2 - e.pageX) / 20;
@@ -29,8 +35,8 @@ container.addEventListener("touchend", (e) => {
   container.addEventListener("transitionend", () => {
     img.style.transform = "rotateZ(0deg)";
     img.style.transition = "all 0.8s ease";
-    card.style.transition = "all 0.8s ease";
     card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+    card.style.transition = "all 0.8s ease";
   });
 });
 container.addEventListener("mouseleave", (e) => {
