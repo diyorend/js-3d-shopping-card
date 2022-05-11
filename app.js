@@ -24,8 +24,10 @@ container.addEventListener("touchmove", (e) => {
   let x = (window.innerWidth / 2 - e.pageX) / 30;
   let y = (window.innerHeight / 2 - e.pageY) / 30;
   card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
-  img.style.transform = "rotateZ(-30deg)";
-  img.style.transition = "all 1s ease";
+  container.addEventListener("touchstart", () => {
+    img.style.transform = "rotateZ(-30deg)";
+    img.style.transition = "all 1s ease";
+  });
   card.style.transition = "all 1s ease";
   container.style.transition = "all 1s ease";
   container.addEventListener("transitionend", (e) => {
