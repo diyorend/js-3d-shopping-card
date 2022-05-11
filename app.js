@@ -17,7 +17,7 @@ container.addEventListener("mousemove", (e) => {
 container.addEventListener("touchstart", (e) => {
   card.style.transition = "none";
   img.style.transform = "rotateZ(-30deg)";
-  img.style.transition = "all 0.2s ease";
+  img.style.transition = "all 0.08s ease";
 });
 container.addEventListener("mouseenter", (e) => {
   card.style.transition = "none";
@@ -25,7 +25,7 @@ container.addEventListener("mouseenter", (e) => {
   img.style.transition = "all 0.8s ease";
 });
 container.addEventListener("touchend", (e) => {
-  card.style.transition = "all 0.2s ease";
+  card.style.transition = "all 0.8s ease";
   card.style.transform = `rotateY(0deg) rotateX(0deg)`;
   img.style.transform = "rotateZ(0deg)";
 });
