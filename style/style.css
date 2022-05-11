@@ -43,6 +43,12 @@ body {
   height: 100vh;
 }
 
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}
+
 .card {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
