@@ -27,10 +27,6 @@ container.addEventListener("mouseenter", (e) => {
 container.addEventListener("transitionend", (e) => {
   card.style.transition = "all 0.8s ease";
   card.style.transform = `rotateY(0deg) rotateX(0deg)`;
-  img.style.transform = "rotateZ(0deg)";
-});
-container.addEventListener("mouseleave", (e) => {
-  card.style.transition = "all 0.8s ease";
-  card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+  img.style.transition = "all 0.8s ease";
   img.style.transform = "rotateZ(0deg)";
 });
