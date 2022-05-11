@@ -4,7 +4,7 @@ const title = document.querySelector(".title");
 const img = document.querySelector(".image img");
 const description = document.querySelector("h3");
 
-container.addEventListener("touches", (e) => {
+container.addEventListener("touchmove", (e) => {
   let x = (window.innerWidth / 2 - e.pageX) / 20;
   let y = (window.innerHeight / 2 - e.pageY) / 20;
   card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
