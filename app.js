@@ -28,11 +28,10 @@ container.addEventListener("touchstart", (e) => {
   img.style.transition = "all 1s ease";
   card.style.transition = "all 1s ease";
 });
-container.addEventListener("touchend", (e) => {
-  container.addEventListener("transitionend", () => {
-    img.style.transform = "rotateZ(0deg)";
-    img.style.transition = "all 0.8s ease";
-    card.style.transition = "all 0.8s ease";
-    card.style.transform = `rotateY(0deg) rotateX(0deg)`;
-  });
+
+container.addEventListener("transitionend", () => {
+  img.style.transform = "rotateZ(0deg)";
+  img.style.transition = "all 0.8s ease";
+  card.style.transition = "all 0.8s ease";
+  card.style.transform = `rotateY(0deg) rotateX(0deg)`;
 });
