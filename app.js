@@ -20,9 +20,9 @@ container.addEventListener("mouseleave", (e) => {
   img.style.transform = "rotateZ(0deg)";
 });
 
-container.addEventListener("touchend", (e) => {
-  let x = (window.innerWidth / 2 - e.pageX) / 30;
-  let y = (window.innerHeight / 2 - e.pageY) / 30;
+container.addEventListener("ontouchmove", (e) => {
+  let x = (window.innerWidth / 2 - e.touches[0].pageX) / 30;
+  let y = (window.innerHeight / 2 - e.touches[0].pageY) / 30;
   card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
 
   img.style.transform = "rotateZ(-30deg)";
