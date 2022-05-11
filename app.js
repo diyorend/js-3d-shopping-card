@@ -27,10 +27,8 @@ container.addEventListener("touchstart", (e) => {
   img.style.transform = "rotateZ(-30deg)";
   img.style.transition = "all 1s ease";
   card.style.transition = "all 1s ease";
-  card.addEventListener("transitionend", () => {
+  card.addEventListener("transitionend", (e) => {
     img.style.transform = "rotateZ(0deg)";
-    img.style.transition = "all 0.8s ease";
-    card.style.transition = "all 0.8s ease";
     card.style.transform = `rotateY(0deg) rotateX(0deg)`;
   });
 });
