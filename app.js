@@ -21,13 +21,14 @@ container.addEventListener("mouseleave", (e) => {
 });
 
 container.addEventListener("touchstart", (e) => {
-  let x = (window.innerWidth / 2 - e.pageX) / 20;
-  let y = (window.innerHeight / 2 - e.pageY) / 20;
+  let x = (window.innerWidth / 2 - e.pageX) / 30;
+  let y = (window.innerHeight / 2 - e.pageY) / 30;
   card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
   img.style.transform = "rotateZ(-30deg)";
   img.style.transition = "all 1s ease";
   card.style.transition = "all 1s ease";
-  card.addEventListener("transitionend", (e) => {
+  container.style.transition = "all 1s ease";
+  container.addEventListener("transitionend", (e) => {
     img.style.transform = "rotateZ(0deg)";
     card.style.transform = `rotateY(0deg) rotateX(0deg)`;
   });
